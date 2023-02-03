@@ -1,0 +1,187 @@
+@import "../../assets/scss/base/mixins";
+@import "../../assets/scss/base/fonts";
+.main {
+    width: 100%;
+   @include d-flex(center,center);
+    flex-direction: column;
+    padding: 4em 0;
+    gap: 3rem;
+    background-color: rgb(249, 247, 247);
+
+    .search-head {
+        @include d-flex(center,center);
+        color: rgb(100, 98, 98);
+        font-weight: 500;
+        gap: 2.7em;
+        .search {
+            .input-container {
+                display: flex;
+                .icon {   
+                    min-width: 50px;
+                    text-align: center;
+                    color:#7e7979;   
+                }
+            }
+            ::placeholder {
+                color: rgb(100, 98, 98);
+            }
+            .input-field {  
+                border: none;
+                background: transparent;
+              outline: none;
+            }
+        }
+        .history {
+            background-color: rgb(227, 227, 233);
+            padding: 1em 1.7em;
+            @include d-flex(center,center);
+            border-radius: 2em;
+            font-size: 0.7em; 
+        }
+    }
+    .cards {
+        @include d-flex(center,flex-start);
+        gap: 2.3rem;
+        .card__container {
+            @include d-flex(space-between,center);
+            flex-direction: column;
+            
+            .card {
+                background-color: #fff;
+               @include height-width(7rem,7rem);
+                box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+                border-radius: 0.7em;
+                @include d-flex(center,center);
+                flex-direction: column;
+                .soverlap {
+                    @include height-width(1.7em,1.7em);
+                    border-radius: 5em;
+                    @include  text-relative-font(.8em, 1.3em);
+                }
+                .smoverlap {
+                    @include height-width(1em,1em);
+                    @include text-relative-right(2.4em,1.3em);
+                    border-radius: 3em;
+                }
+                .overlap {
+                    border-radius: 3em;
+                    @include height-width(3.6em,3.6em);
+                    @include relative-top-bottom(em,1.2em);
+                    .credit {
+                        @include text-relative-font(.7em,.4em);
+                        font-size: 1.6em;
+                    }
+                    .house {
+                        @include text-relative-right(.3em,.2em);
+                        font-size: 1.6em;
+                    }
+                }
+            }
+
+            #card1 {
+                color: rgba(69, 17, 148, 0.77);
+                .overlap__circle{
+                    background-color: rgba(69, 17, 148, 0.238);
+                }
+            }
+            #card2 {
+                color: rgba(17, 148, 39, 0.77);
+                .overlap__circle2{
+                    background-color: rgba(17, 148, 26, 0.238);
+                }
+            }
+
+            #card3 {
+                color: rgba(137, 17, 148, 0.77);
+                .overlap__circle3{
+                    background-color: rgba(146, 17, 148, 0.238);
+                }
+            }
+
+            #card4 {
+                color: rgba(146, 148, 17, 0.77);
+                .overlap__circle4{
+                    background-color: rgba(137, 148, 17, 0.238);
+                }
+            }
+
+            #card5 {
+                color: rgba(210, 119, 34, 0.77);
+                .overlap__circle5{
+                    background-color: rgba(195, 102, 15, 0.238);
+                }
+            }
+
+            #card6 {
+                color: rgba(210, 34, 181, 0.77);
+                .overlap__circle6{
+                    background-color: rgba(190, 44, 173, 0.395);
+                }
+            }
+
+            #card7 {
+                color: rgba(210, 34, 58, 0.77);
+                .overlap__circle7{
+                    background-color: rgba(194, 65, 87, 0.395);
+                }
+            }
+
+            #card8 {
+                color: rgba(34, 187, 210, 0.77);
+                .overlap__circle8{
+                    background-color: rgba(71, 195, 181, 0.395);
+                }
+            }
+            .card__text{
+                text-align: center;
+                margin-top: 1em;
+                width: 6em;
+                .text{
+                    @include text-size-weight-color(.9em,400,rgb(98, 97, 97));
+                    
+                }
+            }
+        }
+    }
+    .button_cards{
+        @include d-flex(center,center);
+        gap: 2em;
+        padding: 2em 0;
+      .card_over{
+        @include flex-fd-column;
+        @include width-height-padding-bg-color-color(26.6em,33em,3.5em 2.5em,white,none);
+        @include b-radius-gap-b-shadow(.5em,2em,(rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px));
+        text-align: center;
+        .img{
+            img{
+                @include width-height( 14em,10em);
+            }
+        }
+        .fond_text{
+            @include flex-v-center; 
+            flex-direction: column;
+            gap: 1.7em;
+            // .headding{
+
+            // }
+            .paragraph{
+                line-height: 2em;
+                @include text-size-weight-color(1em,400,grey);
+            }
+            .button{
+                font-family: $family;
+                width: 10em;
+                @include button(#FF4141,3em,1em 2em,white,1em);
+                font-weight: 600;
+                background: transparent;
+                border: 1px solid #FF4141;
+            }
+            .button_width{
+                width: 11em;
+            }
+        }
+
+      }
+        
+    }
+}

@@ -1,0 +1,75 @@
+@import "../../assets/scss/base/mixins";
+.main{
+    padding: 5em;
+    background-color: rgba(219, 233, 236, 0.662);
+    .container{
+ @include  flex-fd-column;
+  gap: 2.7em;
+        .heddings{
+            @include  flex-fd-column;
+            gap:1em;
+            .main_head{
+                @include text-size-weight-color(1.5em,none,rgb(30, 29, 29));
+            }
+            .simple_head{
+                @include text-size-weight-color(1.2em,500,rgba(128, 128, 128, 0.822));
+            }
+        }
+        .multiple_card{
+            @include d-flex(center, center);
+       gap: 3em;
+            .card{
+                @include width-height(26.5em,24rem);
+            position: relative;
+                .rent{
+                    @include width-height(3.75em,auto);
+                    @include text-size-weight-color(small,none,white);
+                    @include d-flex(center, center);
+                    padding: .2em;
+                    border-bottom-right-radius: .4em;
+                    position: absolute;
+                    top: 1.1em;
+                    background-color: rgba(20, 190, 117, 0.882);
+                }
+                .image{
+                img{
+                    @include width-height(26.5em,100%);
+                    border-radius: .3em;
+                   
+                }
+            }
+                .icon{
+                   @include text-absolute-font(10.3em,5.6em);
+                   @include width-height(5.1em,auto);
+                    z-index: 1;
+                    border: none;
+                  img{
+                   @include width-height(100%,auto);
+                   @include b-radius-gap-b-shadow(3em,none,( rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset));
+                   border: none;
+                  }
+                }
+                .text{
+                    @include text-absolute-right-b(-1em,0);
+                    @include flex-fd-column;
+                    @include width-height-padding-bg-color-color(22.5em,12em, 3.36em 1.5em 2em 1.9em,white,none);
+                    @include b-radius-gap-b-shadow(none,.8em,(rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset));
+                      border-bottom-left-radius: 1em;
+                      border-top-left-radius: 1em;
+                      line-height: 1.7em;
+                    h1{
+                    font-size: 1.25em;
+                    }
+                    .text_p{
+                        @include text-size-weight-color(1em,500,rgb(146, 142, 142));
+                    }
+                    .number_p{
+                        @include text-size-weight-color(1.2em,700,none);
+                    }
+                }
+                
+            }
+        }
+    }
+    
+}

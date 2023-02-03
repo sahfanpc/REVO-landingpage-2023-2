@@ -1,0 +1,78 @@
+.main{
+    width: 100%;
+    height: 25.3em;
+    background-image:url("../../assets/images/Group\ 56574.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    .container{
+        width: 80em;
+        // background-color: red;
+        height: 16.6em;
+        .head{
+            p{
+                font-size: 5em;
+                font-weight: 700;
+                color: white;
+                padding: .4em 0;
+                span{
+                    color: black;
+                }
+            }
+        }
+        .body{
+            width: 19.8em;
+            // background-color: gray;
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+            gap: 1em;
+            .text{
+font-size: 1.2em;
+color: rgb(222, 218, 218);
+            }
+            .app{
+                display: flex;
+                // justify-content: center;
+                align-items: center;
+                gap: 1.8em;
+                // background-color: yellow;
+.download{
+    opacity: .8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9em;
+    height: 3em;
+    border-radius: .3em;
+    background-color: black;
+    gap: .5em;
+    .icon1{
+        img{
+            width:2.9em;
+            height: 2.2em;
+        }
+    }
+    .icon2{
+        img{
+            width:2.3em;
+            height: 2.3em;
+        }
+    }
+    .icontext{
+        color: white;
+        .small{
+            font-size: .48em;
+        }
+        .large{
+            font-size: .87em;
+        }
+    }
+}
+            }
+        }
+    }
+
+}                           

@@ -1,0 +1,49 @@
+@import "../../assets/scss/base/mixins";
+@import "../../assets/scss/base/colors";
+.main{
+    padding: 5em 0;
+    @include d-flex(center,center);
+    background-color: rgb(249, 247, 247);
+    .container{
+        @include d-flex(center,flex-start);
+        @include flex-fd-column;
+        gap: 2em;
+        .head{
+            @include text-size-weight-color(1.4em,600,#000000);
+        }
+        .cards{
+            @include d-flex(center,center);
+          gap: 3em;
+          .card{
+            @include d-flex(center,center);
+            @include width-height-padding-bg-color-color(13.5em,15em,none,white,none);
+            @include b-radius-gap-b-shadow(.6em,.8em,(rgba(99, 99, 99, 0.2) 0px 2px 8px 0px));
+            position: relative;
+              flex-direction: column;
+              .icon{
+                img{
+                 height: 7rem;
+                }
+              }
+              .text{
+                 @include d-flex(none,center);
+                  flex-direction: column;
+                  gap: .5em;
+              }
+              .arrowicon{
+                @include d-flex(center,center);
+                @include  width-height-padding-bg-color-color(3rem,3rem,none,#00A5B5,white);
+                position: absolute;
+                border-radius: 50%;
+                bottom: -1.5rem;
+                .material-icons-round{
+                    font-size: 2.6rem;
+                }
+
+              }
+      
+          }
+        }
+    }
+  
+    }
