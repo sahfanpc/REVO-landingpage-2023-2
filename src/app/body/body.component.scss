@@ -4,21 +4,15 @@
 @import "../../assets/scss/base/typography";
 
 .main{
-    width: 100%;
-    height: 32rem;
+  @include width-height-padding-bg-color-color(100%,32rem,none,#40EDFF,none);
   @include d-flex(center, center);
-  background-color: #40EDFF;
   position: relative;
-
   .body-content{
+    @include width-height(50%,40%);
   text-align: center;
-  width: 50%;
-  height: 40%;
-
   .body-head{
   @include text-size-weight-color(4rem,500t,#fff);
   position: relative;
-  // bottom: 0.3em
 }
   .body-text{
     @include text-size-weight-color(1.2rem,500t,#fff);
@@ -27,8 +21,7 @@
   }
   .button{
     @include button(rgb(34, 31, 31),3em,1em 2.5em,white,1.1em);
-    position: relative;
-  top: 1em;
+    @include relative-top-bottom(1em,none);
     border:none;
     font-family: $family;
   }
@@ -38,10 +31,9 @@
   }
   }
   .linkbutton{
-    position: absolute;
-    bottom: 2em;
-    border: 1px solid gray;
+    @include text-absolute-right-b(2em,none);
    @include button(white,1em 1em 0em 0em,none,rgb(27, 25, 25),1em);
+   border: 1px solid gray;
     .ul-links{
        @include d-flex(center, center);
        text-decoration: none;
@@ -59,23 +51,19 @@
     }
   }
   .search{
-    position: absolute;
-    bottom: -2em;
+    @include text-absolute-right-b(-2em,none);
   .searchbutton{
-    display: flex;
-    justify-content: space-between;
+    @include d-flex(space-between,center);
     @include width-height-padding-bg-color-color(64em,auto,0.3em,white,grey);
-    border-radius: 3em;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0) 0px 15px 12px;
-    align-items: center;
-   list-style: none;
+    @include b-radius-gap-b-shadow(3em,none,(rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0) 0px 15px 12px));
+    list-style: none;
    .container{
     @include  d-flex(center,center);
     }
    .material-icons-round{
+    @include position-fsize-left(none,1.4em);
     color: $gray2;
-    position: relative;
-    left: 1.4em;
+
 
   }
   .select{
